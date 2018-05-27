@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.javastreets</groupId>
 	<artifactId>mule-firebase-connector</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>mule-extension</packaging>
 	<name>MULE 4 Connector for Google Firebase</name>
 	<description>MULE 4 Connector for Google Firebase</description>
@@ -40,7 +38,7 @@
 		<url>https://github.com/manikmagar/mule-firebase-connector</url>
 		<connection>scm:git:git@github.com:manikmagar/mule-firebase-connector.git</connection>
 		<developerConnection>scm:git:git@github.com:manikmagar/mule-firebase-connector.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>0.0.1</tag>
 	</scm>
 
 
