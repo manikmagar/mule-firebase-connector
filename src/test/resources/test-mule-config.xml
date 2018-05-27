@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:firebase="http://www.mulesoft.org/schema/mule/firebase"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/firebase http://www.mulesoft.org/schema/mule/firebase/current/mule-firebase.xsd">
+	<firebase:config name="Firebase_Config"
+		doc:name="Firebase Config"
+		configId="test-config"
+		doc:id="647efd37-6f62-4218-a19f-59c6929d2d1e">
+		<firebase:connection
+			serviceAccoutKeyPath="${test.service.path}"
+			databaseUrl="${test.database.url}"
+			appName="test"/>
+	</firebase:config>
+	<flow name="test-mule-config-set-data"
+		doc:id="de36e948-36dd-48db-8ba8-745b7e0c49df">
+		<firebase:database-set-data
+			doc:name="Database: Set Data"
+			doc:id="91e737f3-c797-4e62-a0a8-2a4bda60c040"
+			config-ref="Firebase_Config" refPath="#[vars.refPath]"
+			content='#[payload]' />
+	</flow>
+	<flow name="test-mule-config-push-data"
+		doc:id="a23f0ece-081c-4e43-8d0f-af726f9f94ef">
+		<firebase:database-push-data
+			doc:name="Database: Push Data"
+			doc:id="7ae9099b-5cb9-4e11-8671-41dcc99938a2"
+			config-ref="Firebase_Config" refPath="#[vars.refPath]"
+			content='#[payload]' />
+	</flow>
+	<flow name="test-mule-config-update-data"
+		doc:id="90db05f0-161d-4ad7-83ff-d74cc4b0e6f9">
+		<firebase:database-update-data
+			doc:name="Database: Update Data"
+			doc:id="4c52ee3d-76fe-4891-861e-caf5ae672fc9" content="#[payload]"
+			config-ref="Firebase_Config" refPath="#[vars.updateRef]" />
+	</flow>
+	<flow name="test-mule-config-query-data"
+		doc:id="fb1fe94e-0340-4e8b-a8c2-1d2d5b88f0c1">
+		<firebase:database-query-data
+			doc:name="Database: Query Data"
+			doc:id="9118379f-2fa6-498f-903f-d450ce809ad0"
+			config-ref="Firebase_Config" refPath="#[vars.queryPath]" />
+	</flow>
+</mule>
