@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.javastreets</groupId>
 	<artifactId>mule-firebase-connector</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<packaging>mule-extension</packaging>
 	<name>MULE 4 Connector for Google Firebase</name>
 	<description>MULE 4 Connector for Google Firebase</description>
@@ -38,7 +38,7 @@
 		<url>https://github.com/manikmagar/mule-firebase-connector</url>
 		<connection>scm:git:git@github.com:manikmagar/mule-firebase-connector.git</connection>
 		<developerConnection>scm:git:git@github.com:manikmagar/mule-firebase-connector.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>0.0.2</tag>
 	</scm>
 
 
