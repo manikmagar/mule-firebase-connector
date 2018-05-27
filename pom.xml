@@ -8,13 +8,41 @@
 	<artifactId>mule-firebase-connector</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>mule-extension</packaging>
-	<name>Mule-firebase-connector Extension</name>
+	<name>MULE 4 Connector for Google Firebase</name>
+	<description>MULE 4 Connector for Google Firebase</description>
 
 	<parent>
 		<groupId>org.mule.extensions</groupId>
 		<artifactId>mule-modules-parent</artifactId>
 		<version>1.1.0</version>
 	</parent>
+	
+	<developers>
+		<developer>
+			<name>Manik Magar</name>
+			<email>manik@javastreets.com</email>
+		</developer>
+	</developers>
+	<organization>
+		<name>JavaStreets.com</name>
+		<url>https://javastreets.com</url>
+	</organization>
+	<url>https://github.com/manikmagar/mule-firebase-connector</url>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/manikmagar/mule-firebase-connector</url>
+		<connection>scm:git:git@github.com:manikmagar/mule-firebase-connector.git</connection>
+		<developerConnection>scm:git:git@github.com:manikmagar/mule-firebase-connector.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
 
 	<properties>
 		<firebase.admin.version>6.0.0</firebase.admin.version>
@@ -44,6 +72,7 @@
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<useReleaseProfile>true</useReleaseProfile>
 					<releaseProfiles>release</releaseProfiles>
+					<tagNameFormat>@{project.version}</tagNameFormat>
 					<goals>deploy</goals>
 				</configuration>
 				<dependencies>
